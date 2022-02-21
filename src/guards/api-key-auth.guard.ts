@@ -23,7 +23,7 @@ export class ApiKeyAuthGuard implements CanActivate {
     const req = context.switchToHttp().getRequest<Request>();
     const apiKeyHeaderValue = req.headers['x-api-key'];
     if (!apiKeyHeaderValue) {
-      throw new UnauthorizedException('Api key was not provided');
+      throw new UnauthorizedException('Unauthorized access!!!');
     }
 
     if (apiKeyHeaderValue !== 'secret') {

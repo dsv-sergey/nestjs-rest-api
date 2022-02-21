@@ -36,6 +36,7 @@ export class CartsController {
     return this.cartsService.update(+id, updateCartDto);
   }
 
+  @SkipAuth()
   @Get()
   findAll() {
     return this.cartsService.findAll();
